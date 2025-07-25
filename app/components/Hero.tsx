@@ -47,48 +47,6 @@ export function Hero() {
                 Invertir Ahora
               </a>
             </div>
-
-            {/* Trust Indicators */}
-            <div className="flex items-center space-x-6 pt-6">
-              <div className="flex items-center space-x-2">
-                <svg
-                  className="w-6 h-6 text-gold-400"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                <span className="text-sm">Alianza Hilton</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <svg
-                  className="w-6 h-6 text-gold-400"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <span className="text-sm">+20 años experiencia</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <svg
-                  className="w-6 h-6 text-gold-400"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                <span className="text-sm">Proyectos memorables</span>
-              </div>
-            </div>
           </div>
 
           {/* Visual Element */}
@@ -115,7 +73,7 @@ export function Hero() {
                     </div>
                   </div>
                   <p className="text-neutral-600">
-                    &ldquo;Entre los mejores Hampton by Hilton del mundo&rdquo;
+                    "Entre los mejores Hampton by Hilton del mundo"
                   </p>
                   <div className="flex items-center space-x-4 text-sm text-neutral-500">
                     <span>📍 Bariloche, Argentina</span>
@@ -123,41 +81,7 @@ export function Hero() {
                   </div>
                 </div>
               </div>
-
-              {/* Floating Stats */}
-              <div className="absolute -top-6 -right-6 bg-white rounded-xl p-4 shadow-lg">
-                <div className="text-center">
-                  <div className="font-bold text-2xl text-primary-800">5+</div>
-                  <div className="text-sm text-neutral-600">Proyectos</div>
-                </div>
-              </div>
-
-              <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-lg">
-                <div className="text-center">
-                  <div className="font-bold text-2xl text-gold-600">100%</div>
-                  <div className="text-sm text-neutral-600">Éxito</div>
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-          <div className="animate-bounce">
-            <svg
-              className="w-6 h-6 text-white"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 14l-7 7m0 0l-7-7m7 7V3"
-              />
-            </svg>
           </div>
         </div>
       </div>

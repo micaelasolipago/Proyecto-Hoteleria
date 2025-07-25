@@ -31,28 +31,6 @@ const projects = [
     features: ["Operativo desde 2018", "Performance excepcional", "Referencia mundial"],
     image: "bg-gradient-to-br from-purple-600 to-purple-800",
     badge: "Éxito"
-  },
-  {
-    id: 4,
-    title: "Iconcenter Rosario",
-    subtitle: "Un nuevo ícono de la ciudad",
-    location: "Rosario, Argentina",
-    status: "Completado",
-    description: "Desarrollo mixto que incluye el Hampton by Hilton Rosario, marcando un hito en el desarrollo urbano de la ciudad.",
-    features: ["Desarrollo mixto", "Ubicación estratégica", "Arquitectura icónica"],
-    image: "bg-gradient-to-br from-orange-600 to-orange-800",
-    badge: ""
-  },
-  {
-    id: 5,
-    title: "Pool de Inversión Punta Cana",
-    subtitle: "La perla del Caribe",
-    location: "Punta Cana, República Dominicana",
-    status: "Internacional",
-    description: "Nuestra primera oportunidad de inversión internacional en uno de los destinos turísticos más atractivos del Caribe.",
-    features: ["Mercado internacional", "Destino premium", "Diversificación geográfica"],
-    image: "bg-gradient-to-br from-teal-600 to-teal-800",
-    badge: "Internacional"
   }
 ];
 
@@ -136,38 +114,12 @@ export function Projects() {
                 </div>
 
                 {/* CTA */}
-                <button className="w-full bg-primary-600 text-white py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors duration-200 group-hover:bg-primary-700">
+                <button className="w-full bg-primary-600 text-white py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors duration-200">
                   Conocer Más
                 </button>
               </div>
             </div>
           ))}
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-primary-600 to-primary-700 rounded-2xl p-8 md:p-12">
-            <h3 className="font-playfair text-3xl font-bold text-white mb-4">
-              ¿Listo para invertir en el próximo proyecto?
-            </h3>
-            <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
-              Únete a los inversores que confían en nuestros desarrollos hoteleros de clase mundial.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#contacto"
-                className="bg-gold-500 text-primary-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gold-400 transition-colors duration-200"
-              >
-                Solicitar Información
-              </a>
-              <a
-                href="#nosotros"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-primary-900 transition-all duration-200"
-              >
-                Conocer Más
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </section>

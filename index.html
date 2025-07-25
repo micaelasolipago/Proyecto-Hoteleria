@@ -1,455 +1,614 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Argenway | Proyectos Memorables - Desarrollos Hoteleros de Lujo</title>
-  <meta name="description" content="Desarrolladores y gerenciadores hotelero-inmobiliarios. Creamos proyectos memorables con Hilton en Bariloche, Rosario y destinos internacionales."/>
-  
-  <!-- CSS Externo -->
-  <link rel="stylesheet" href="styles.css"/>
-  
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Argenway | Proyectos Memorables - Desarrollos Hoteleros de Lujo</title>
+    <meta name="description" content="Desarrolladores y gerenciadores hotelero-inmobiliarios. Creamos proyectos memorables con Hilton en Bariloche, Rosario y destinos internacionales.">
+    <meta name="keywords" content="inversiones inmobiliarias, hoteles Hilton, desarrollos hoteleros, Argenway, Bariloche, Rosario">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Argenway | Proyectos Memorables">
+    <meta property="og:description" content="Desarrolladores y gerenciadores hotelero-inmobiliarios con proyectos de la cadena Hilton">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="font-inter antialiased">
-  <div class="min-h-screen bg-white">
-    <header class="bg-white shadow-lg fixed w-full top-0 z-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center py-4">
-          <div class="flex items-center">
-            <h1 class="font-playfair text-3xl font-bold text-primary-800">Argenway</h1>
-            <span class="ml-2 text-sm text-neutral-600 font-medium">Proyectos memorables</span>
-          </div>
-          <nav class="hidden lg:flex items-center space-x-8">
-            <a href="#proyectos" class="text-neutral-700 hover:text-primary-600 font-medium transition-colors duration-200">Nuestros Proyectos</a>
-            <a href="#nosotros" class="text-neutral-700 hover:text-primary-600 font-medium transition-colors duration-200">Nosotros</a>
-            <a href="#servicios" class="text-neutral-700 hover:text-primary-600 font-medium transition-colors duration-200">Servicios</a>
-            <a href="#noticias" class="text-neutral-700 hover:text-primary-600 font-medium transition-colors duration-200">Noticias</a>
-            <a href="#contacto" class="bg-primary-600 text-white px-6 py-2 rounded-md hover:bg-primary-700 transition-colors duration-200 font-medium">Contacto</a>
-          </nav>
-          <button class="lg:hidden flex items-center px-3 py-2 border border-neutral-200 rounded text-neutral-500 hover:text-neutral-700 hover:border-neutral-300">
-            <svg class="fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <title>Menu</title>
-              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-            </svg>
-          </button>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <h1 class="logo-title">Argenway</h1>
+                    <span class="logo-subtitle">Proyectos memorables</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <a href="#proyectos" class="nav-link">Nuestros Proyectos</a>
+                    <a href="#nosotros" class="nav-link">Nosotros</a>
+                    <a href="#noticias" class="nav-link">Noticias</a>
+                    <a href="#contacto" class="nav-cta">Contacto</a>
+                </nav>
+
+                <!-- Mobile menu button -->
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <svg class="hamburger-icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="nav-mobile" id="mobileMenu">
+                <div class="nav-mobile-content">
+                    <a href="#proyectos" class="nav-mobile-link" onclick="closeMobileMenu()">Nuestros Proyectos</a>
+                    <a href="#nosotros" class="nav-mobile-link" onclick="closeMobileMenu()">Nosotros</a>
+                    <a href="#noticias" class="nav-mobile-link" onclick="closeMobileMenu()">Noticias</a>
+                    <a href="#contacto" class="nav-mobile-cta" onclick="closeMobileMenu()">Contacto</a>
+                </div>
+            </div>
         </div>
-      </div>
     </header>
 
     <main>
-      <!-- Hero Section -->
-      <section class="relative bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700 pt-24 pb-20 overflow-hidden">
-        <div class="absolute inset-0 bg-black bg-opacity-20"></div>
-        <div class="absolute inset-0 opacity-10" style="background-image:url(&quot;data:image/svg+xml,%3Csvg width=&#x27;60&#x27; height=&#x27;60&#x27; viewBox=&#x27;0 0 60 60&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%3E%3Cg fill=&#x27;none&#x27; fill-rule=&#x27;evenodd&#x27;%3E%3Cg fill=&#x27;%23ffffff&#x27; fill-opacity=&#x27;0.1&#x27;%3E%3Ccircle cx=&#x27;30&#x27; cy=&#x27;30&#x27; r=&#x27;1&#x27;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;)"></div>
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="grid lg:grid-cols-2 gap-12 items-center min-h-[70vh]">
-            <div class="text-white space-y-8 animate-fade-in-up">
-              <div class="space-y-4">
-                <h1 class="font-playfair text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                                     Proyectos <span class="text-accent-500">Memorables</span>
-                </h1>
-                <p class="text-xl md:text-2xl text-white font-light leading-relaxed max-w-2xl">
-                  Desarrolladores y gerenciadores hotelero-inmobiliarios con más de 20 años de experiencia
-                </p>
-              </div>
-              <div class="prose prose-lg text-white max-w-2xl">
-                <p>Creamos alianzas estratégicas con <strong class="text-white">Hilton</strong> para desarrollar proyectos de clase mundial en destinos premium como Bariloche, Rosario y mercados internacionales. Nuestra experiencia en turismo receptivo nos permite crear desarrollos únicos que combinan rentabilidad y excelencia.</p>
-              </div>
-              <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                                 <a href="#proyectos" class="bg-accent-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-accent-400 transform hover:scale-105 transition-all duration-300 shadow-xl text-center">Ver Proyectos</a>
-                <a href="#contacto" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-primary-900 transition-all duration-300 text-center">Invertir Ahora</a>
-              </div>
-              <div class="flex items-center space-x-6 pt-6">
-                <div class="flex items-center space-x-2">
-                  <svg class="w-6 h-6 text-accent-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                  </svg>
-                  <span class="text-sm">Alianza Hilton</span>
-                </div>
-                <div class="flex items-center space-x-2">
-                  <svg class="w-6 h-6 text-accent-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                  </svg>
-                  <span class="text-sm">+20 años experiencia</span>
-                </div>
-                <div class="flex items-center space-x-2">
-                  <svg class="w-6 h-6 text-accent-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
-                  </svg>
-                  <span class="text-sm">Proyectos memorables</span>
-                </div>
-              </div>
-            </div>
-            <div class="relative animate-slide-in-right">
-              <div class="relative">
-                                 <div class="bg-gradient-to-br from-accent-500 to-accent-600 rounded-2xl p-8 shadow-2xl">
-                  <div class="bg-white rounded-xl p-6 space-y-4">
-                    <div class="flex items-center justify-between">
-                      <h3 class="font-playfair text-2xl font-bold text-primary-800">Hampton by Hilton</h3>
-                      <div class="flex space-x-1">
-                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20">
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                        </svg>
-                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20">
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                        </svg>
-                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20">
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                        </svg>
-                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20">
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                        </svg>
-                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20">
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                        </svg>
-                      </div>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-background"></div>
+            <div class="hero-pattern"></div>
+            
+            <div class="container">
+                <div class="hero-content">
+                    <!-- Content -->
+                    <div class="hero-text">
+                        <div class="hero-titles">
+                            <h1 class="hero-title">
+                                Proyectos <span class="hero-title-accent">Memorables</span>
+                            </h1>
+                            <p class="hero-subtitle">
+                                Somos desarrolladores y gerenciadores hotelero-inmobiliarios
+                            </p>
+                        </div>
+
+                        <div class="hero-description">
+                            <p>
+                                Creamos alianzas estratégicas con <strong>Hilton</strong> para desarrollar
+                                proyectos de clase mundial en destinos premium como Bariloche,
+                                Rosario y mercados internacionales.
+                            </p>
+                        </div>
+
+                        <div class="hero-buttons">
+                            <a href="#proyectos" class="btn-primary">Ver Proyectos</a>
+                            <a href="#contacto" class="btn-secondary">Invertir Ahora</a>
+                        </div>
                     </div>
-                    <p class="text-neutral-600">"Entre los mejores Hampton by Hilton del mundo"</p>
-                    <div class="flex items-center space-x-4 text-sm text-neutral-500">
-                      <span>📍 Bariloche, Argentina</span>
-                      <span>🏨 Operativo desde 2018</span>
+
+                    <!-- Visual Element -->
+                    <div class="hero-visual">
+                        <div class="hotel-card">
+                            <div class="hotel-card-content">
+                                <div class="hotel-card-header">
+                                    <h3 class="hotel-card-title">Hampton by Hilton</h3>
+                                    <div class="hotel-stars">
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                    </div>
+                                </div>
+                                <p class="hotel-quote">"Entre los mejores Hampton by Hilton del mundo"</p>
+                                <div class="hotel-info">
+                                    <span>📍 Bariloche, Argentina</span>
+                                    <span>🏨 Operativo</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-                <div class="absolute -top-6 -right-6 bg-white rounded-xl p-4 shadow-lg">
-                  <div class="text-center">
-                    <div class="font-bold text-2xl text-primary-800">5+</div>
-                    <div class="text-sm text-neutral-600">Proyectos</div>
-                  </div>
-                </div>
-                <div class="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-lg">
-                  <div class="text-center">
-                    <div class="font-bold text-2xl text-accent-600">100%</div>
-                    <div class="text-sm text-neutral-600">Éxito</div>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
-          <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-            <div class="animate-bounce">
-              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- Nuestros Proyectos -->
-      <section id="proyectos" class="py-20 bg-neutral-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="text-center mb-16">
-            <h2 class="font-playfair text-4xl md:text-5xl font-bold text-primary-800 mb-4">Nuestros Proyectos</h2>
-            <p class="text-xl text-neutral-600 max-w-3xl mx-auto">Cada proyecto es una oportunidad única de inversión respaldada por estándares internacionales y la confianza de la marca Hilton.</p>
-          </div>
-          
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <!-- Hampton by Hilton Bariloche -->
-            <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden group">
-              <div class="bg-gradient-to-br from-accent-500 to-accent-600 h-48 relative overflow-hidden">
-                <div class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-30 transition-all duration-300"></div>
-                <div class="absolute top-4 left-4">
-                  <span class="bg-accent-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Destacado</span>
+        <!-- Projects Section -->
+        <section id="proyectos" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nuestros Proyectos</h2>
+                    <p class="section-description">
+                        Cada proyecto es una oportunidad única de inversión respaldada por estándares internacionales 
+                        y la confianza de la marca Hilton.
+                    </p>
                 </div>
-                <div class="absolute top-4 right-4">
-                  <span class="bg-white bg-opacity-90 text-primary-800 px-3 py-1 rounded-full text-sm font-medium">Operativo</span>
-                </div>
-                <div class="absolute bottom-4 left-4 text-white">
-                  <div class="flex items-center space-x-1">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
-                    </svg>
-                    <span class="text-sm font-medium">Bariloche, Argentina</span>
-                  </div>
-                </div>
-              </div>
-              <div class="p-6">
-                <div class="mb-4">
-                  <h3 class="font-playfair text-xl font-bold text-primary-800 mb-2">Hampton by Hilton Bariloche</h3>
-                                     <p class="text-accent-600 font-medium text-sm mb-3">El inicio de una historia exitosa</p>
-                  <p class="text-neutral-600 text-sm leading-relaxed">Nuestro primer proyecto hotelero. Desarrollado, construido y actualmente gerenciado por nosotros. Reconocido entre los mejores Hampton by Hilton del mundo.</p>
-                </div>
-                <div class="space-y-2 mb-6">
-                  <div class="flex items-center space-x-2">
-                    <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                    </svg>
-                    <span class="text-sm text-neutral-600">Operativo desde 2018</span>
-                  </div>
-                  <div class="flex items-center space-x-2">
-                    <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                    </svg>
-                    <span class="text-sm text-neutral-600">Performance excepcional</span>
-                  </div>
-                  <div class="flex items-center space-x-2">
-                    <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                    </svg>
-                    <span class="text-sm text-neutral-600">Referencia mundial</span>
-                  </div>
-                </div>
-                <button class="w-full bg-primary-600 text-white py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors duration-200">Ver Detalles</button>
-              </div>
-            </div>
 
-            <!-- Hampton by Hilton Rosario -->
-            <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden group">
-              <div class="bg-gradient-to-br from-blue-600 to-blue-800 h-48 relative overflow-hidden">
-                <div class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-30 transition-all duration-300"></div>
-                <div class="absolute top-4 left-4">
-                  <span class="bg-accent-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Nuevo</span>
-                </div>
-                <div class="absolute top-4 right-4">
-                  <span class="bg-white bg-opacity-90 text-primary-800 px-3 py-1 rounded-full text-sm font-medium">En Desarrollo</span>
-                </div>
-                <div class="absolute bottom-4 left-4 text-white">
-                  <div class="flex items-center space-x-1">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
-                    </svg>
-                    <span class="text-sm font-medium">Rosario, Argentina</span>
-                  </div>
-                </div>
-              </div>
-              <div class="p-6">
-                <div class="mb-4">
-                  <h3 class="font-playfair text-xl font-bold text-primary-800 mb-2">Hampton by Hilton Rosario</h3>
-                                     <p class="text-accent-600 font-medium text-sm mb-3">El primer hotel Hilton en Rosario</p>
-                  <p class="text-neutral-600 text-sm leading-relaxed">Un hecho inédito en la historia turística de la región. Desarrollo que marca un hito en el crecimiento hotelero de Rosario.</p>
-                </div>
-                <div class="space-y-2 mb-6">
-                  <div class="flex items-center space-x-2">
-                    <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                    </svg>
-                    <span class="text-sm text-neutral-600">Primera cadena internacional</span>
-                  </div>
-                  <div class="flex items-center space-x-2">
-                    <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                    </svg>
-                    <span class="text-sm text-neutral-600">Centro de la ciudad</span>
-                  </div>
-                  <div class="flex items-center space-x-2">
-                    <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                    </svg>
-                    <span class="text-sm text-neutral-600">Desarrollo mixto</span>
-                  </div>
-                </div>
-                <button class="w-full bg-primary-600 text-white py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors duration-200">Solicitar Info</button>
-              </div>
-            </div>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="project-image project-image-1">
+                            <div class="project-overlay"></div>
+                            <div class="project-badge">Nuevo</div>
+                            <div class="project-status">En Desarrollo</div>
+                            <div class="project-location">
+                                <svg class="location-icon" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Bariloche, Argentina</span>
+                            </div>
+                        </div>
 
-            <!-- Tru by Hilton Bariloche -->
-            <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden group">
-              <div class="bg-gradient-to-br from-purple-600 to-purple-800 h-48 relative overflow-hidden">
-                <div class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-30 transition-all duration-300"></div>
-                <div class="absolute top-4 left-4">
-                  <span class="bg-accent-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Próximo</span>
+                        <div class="project-content">
+                            <h3 class="project-title">Tru by Hilton Bariloche</h3>
+                            <p class="project-subtitle">Volvemos al origen</p>
+                            <p class="project-description">
+                                El complemento ideal para Hampton, reafirmando nuestra confianza en el destino y la alianza con Hilton.
+                            </p>
+
+                            <div class="project-features">
+                                <div class="feature">
+                                    <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Estándares Hilton</span>
+                                </div>
+                                <div class="feature">
+                                    <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Ubicación Premium</span>
+                                </div>
+                                <div class="feature">
+                                    <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>ROI Proyectado 12%</span>
+                                </div>
+                            </div>
+
+                            <button class="project-cta">Conocer Más</button>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="project-image project-image-2">
+                            <div class="project-overlay"></div>
+                            <div class="project-badge">Destacado</div>
+                            <div class="project-status">Disponible</div>
+                            <div class="project-location">
+                                <svg class="location-icon" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Rosario, Argentina</span>
+                            </div>
+                        </div>
+
+                        <div class="project-content">
+                            <h3 class="project-title">Hampton by Hilton Rosario</h3>
+                            <p class="project-subtitle">La seguridad del ladrillo con mayor rentabilidad</p>
+                            <p class="project-description">
+                                El primer hotel de la cadena Hilton en Rosario, constituyendo un hecho inédito en la historia turística de la región.
+                            </p>
+
+                            <div class="project-features">
+                                <div class="feature">
+                                    <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Primera cadena internacional</span>
+                                </div>
+                                <div class="feature">
+                                    <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Centro de la ciudad</span>
+                                </div>
+                                <div class="feature">
+                                    <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Gestión profesional</span>
+                                </div>
+                            </div>
+
+                            <button class="project-cta">Conocer Más</button>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <div class="project-image project-image-3">
+                            <div class="project-overlay"></div>
+                            <div class="project-badge">Éxito</div>
+                            <div class="project-status">Operativo</div>
+                            <div class="project-location">
+                                <svg class="location-icon" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Bariloche, Argentina</span>
+                            </div>
+                        </div>
+
+                        <div class="project-content">
+                            <h3 class="project-title">Hampton by Hilton Bariloche</h3>
+                            <p class="project-subtitle">Invertí en una porción del paraíso</p>
+                            <p class="project-description">
+                                Desarrollado, construido y actualmente gerenciado por nosotros. Entre los mejores Hampton by Hilton del mundo.
+                            </p>
+
+                            <div class="project-features">
+                                <div class="feature">
+                                    <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Operativo desde 2018</span>
+                                </div>
+                                <div class="feature">
+                                    <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Performance excepcional</span>
+                                </div>
+                                <div class="feature">
+                                    <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Referencia mundial</span>
+                                </div>
+                            </div>
+
+                            <button class="project-cta">Conocer Más</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="absolute top-4 right-4">
-                  <span class="bg-white bg-opacity-90 text-primary-800 px-3 py-1 rounded-full text-sm font-medium">En Desarrollo</span>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="nosotros" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <!-- Content -->
+                    <div class="about-text">
+                        <h2 class="about-title">
+                            Somos desarrolladores y gerenciadores 
+                            <span class="about-title-accent">hotelero-inmobiliarios</span>
+                        </h2>
+                        
+                        <div class="about-description">
+                            <p class="about-intro">
+                                Nacimos como operadores de turismo receptivo en Argentina y durante años 
+                                lideramos el mercado de pasajeros brasileños que elegían Bariloche como destino.
+                            </p>
+                            
+                            <p>
+                                A partir de esta actividad, construimos un fuerte vínculo con la cadena Hilton, 
+                                de esa alianza nació <strong>Hampton by Hilton Bariloche:</strong> 
+                                desarrollado, construido y actualmente gerenciado por nosotros.
+                            </p>
+                            
+                            <p>
+                                <strong>Iconcenter & Hampton by Hilton Rosario</strong> 
+                                son la continuidad de ese proceso, con el objetivo de traer a nuestra ciudad 
+                                el primer hotel de la cadena y constituyendo un hecho inédito en la historia 
+                                turística de la región.
+                            </p>
+                        </div>
+
+                        <!-- Values -->
+                        <div class="values-grid">
+                            <div class="value-card">
+                                <div class="value-icon value-icon-1">
+                                    <svg fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <h3 class="value-title">Excelencia</h3>
+                                <p class="value-description">Estándares internacionales en cada proyecto</p>
+                            </div>
+
+                            <div class="value-card">
+                                <div class="value-icon value-icon-2">
+                                    <svg fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
+                                    </svg>
+                                </div>
+                                <h3 class="value-title">Experiencia</h3>
+                                <p class="value-description">Más de 20 años en el mercado turístico</p>
+                            </div>
+
+                            <div class="value-card">
+                                <div class="value-icon value-icon-3">
+                                    <svg fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <h3 class="value-title">Confianza</h3>
+                                <p class="value-description">Alianza estratégica con Hilton</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline -->
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-number">1</div>
+                            <div class="timeline-content timeline-content-1">
+                                <h4 class="timeline-title">Turismo Receptivo</h4>
+                                <p class="timeline-description">
+                                    Lideramos el mercado de turismo brasileño en Bariloche, 
+                                    construyendo relaciones sólidas y experiencia en hotelería.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-number timeline-number-2">2</div>
+                            <div class="timeline-content timeline-content-2">
+                                <h4 class="timeline-title">Alianza con Hilton</h4>
+                                <p class="timeline-description">
+                                    Desarrollamos Hampton by Hilton Bariloche, nuestro primer 
+                                    proyecto hotelero internacional de gran éxito.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="absolute bottom-4 left-4 text-white">
-                  <div class="flex items-center space-x-1">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
-                    </svg>
-                    <span class="text-sm font-medium">Bariloche, Argentina</span>
-                  </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats">
+            <div class="stats-background"></div>
+            
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title section-title-white">
+                        Números que nos <span class="section-title-accent">Respaldan</span>
+                    </h2>
+                    <p class="section-description section-description-white">
+                        Más de dos décadas construyendo confianza y creando valor para nuestros inversores
+                    </p>
                 </div>
-              </div>
-              <div class="p-6">
-                <div class="mb-4">
-                  <h3 class="font-playfair text-xl font-bold text-primary-800 mb-2">Tru by Hilton Bariloche</h3>
-                                     <p class="text-accent-600 font-medium text-sm mb-3">Volvemos al origen</p>
-                  <p class="text-neutral-600 text-sm leading-relaxed">El complemento ideal para Hampton, reafirmando nuestra confianza en el destino y fortaleciendo la alianza con Hilton.</p>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">20+</div>
+                        <h3 class="stat-label">Años de Experiencia</h3>
+                        <p class="stat-description">En el mercado turístico y hotelero</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-number">5+</div>
+                        <h3 class="stat-label">Proyectos Activos</h3>
+                        <p class="stat-description">Desarrollos hoteleros premium</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-number">100%</div>
+                        <h3 class="stat-label">Tasa de Éxito</h3>
+                        <p class="stat-description">En proyectos completados</p>
+                    </div>
                 </div>
-                <div class="space-y-2 mb-6">
-                  <div class="flex items-center space-x-2">
-                    <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                    </svg>
-                    <span class="text-sm text-neutral-600">Marca moderna de Hilton</span>
-                  </div>
-                  <div class="flex items-center space-x-2">
-                    <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                    </svg>
-                    <span class="text-sm text-neutral-600">Experiencia simplificada</span>
-                  </div>
-                  <div class="flex items-center space-x-2">
-                    <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                    </svg>
-                    <span class="text-sm text-neutral-600">ROI atractivo</span>
-                  </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="noticias" class="news">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        Management <span class="section-title-accent">News</span>
+                    </h2>
+                    <p class="section-description">
+                        Conocé las últimas novedades del sector y mantente informado sobre 
+                        nuestros proyectos y logros más recientes.
+                    </p>
                 </div>
-                <button class="w-full bg-primary-600 text-white py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors duration-200">Más Información</button>
-              </div>
-            </div>
-          </div>
 
-          <!-- CTA Section -->
-          <div class="text-center">
-            <div class="bg-gradient-to-r from-primary-600 to-primary-700 rounded-2xl p-8 md:p-12">
-              <h3 class="font-playfair text-3xl font-bold text-white mb-4">¿Listo para invertir en el próximo proyecto?</h3>
-              <p class="text-white text-lg mb-8 max-w-2xl mx-auto">Únete a los inversores que confían en nuestros desarrollos hoteleros de clase mundial.</p>
-              <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                                 <a href="#contacto" class="bg-accent-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-accent-400 transition-colors duration-200">Solicitar Información</a>
-                <a href="#nosotros" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-primary-900 transition-all duration-200">Conocer Más</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+                <div class="news-grid">
+                    <article class="news-card">
+                        <div class="news-image">
+                            <div class="news-category">Reconocimientos</div>
+                        </div>
 
-      <!-- Servicios Section -->
-      <section id="servicios" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="text-center mb-16">
-                         <h2 class="font-playfair text-4xl md:text-5xl font-bold text-primary-800 mb-4">Nuestros <span class="text-accent-600">Servicios</span></h2>
-            <p class="text-xl text-neutral-600 max-w-3xl mx-auto">Ofrecemos un servicio integral que abarca todo el ciclo de vida de un proyecto hotelero, desde la conceptualización hasta la operación.</p>
-          </div>
+                        <div class="news-content">
+                            <h3 class="news-title">
+                                Hotel barilochense se encuentra entre los mejores Hampton by Hilton del mundo
+                            </h3>
+                            <p class="news-excerpt">
+                                Nuestro Hampton by Hilton Bariloche ha sido reconocido internacionalmente por su excepcional performance y estándares de calidad.
+                            </p>
+                            <button class="news-link">Leer más →</button>
+                        </div>
+                    </article>
 
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="text-center p-8 bg-neutral-50 rounded-2xl hover:shadow-lg transition-all duration-300">
-              <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg class="w-8 h-8 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
-                </svg>
-              </div>
-              <h3 class="font-playfair text-xl font-bold text-primary-800 mb-4">Desarrollo Inmobiliario</h3>
-              <p class="text-neutral-600 leading-relaxed">Planificación, diseño y construcción de proyectos hoteleros bajo estándares internacionales de calidad.</p>
-            </div>
+                    <article class="news-card">
+                        <div class="news-image">
+                            <div class="news-category">Inversiones</div>
+                        </div>
 
-            <div class="text-center p-8 bg-neutral-50 rounded-2xl hover:shadow-lg transition-all duration-300">
-                             <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                 <svg class="w-8 h-8 text-accent-600" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-              </div>
-              <h3 class="font-playfair text-xl font-bold text-primary-800 mb-4">Gestión Hotelera</h3>
-              <p class="text-neutral-600 leading-relaxed">Operación y administración profesional de hoteles con más de 20 años de experiencia en el sector.</p>
-            </div>
-
-            <div class="text-center p-8 bg-neutral-50 rounded-2xl hover:shadow-lg transition-all duration-300">
-              <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
-                </svg>
-              </div>
-              <h3 class="font-playfair text-xl font-bold text-primary-800 mb-4">Consultoría de Inversión</h3>
-              <p class="text-neutral-600 leading-relaxed">Asesoramiento especializado en oportunidades de inversión hotelera e inmobiliaria.</p>
-            </div>
-
-            <div class="text-center p-8 bg-neutral-50 rounded-2xl hover:shadow-lg transition-all duration-300">
-              <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg class="w-8 h-8 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z" clip-rule="evenodd"></path>
-                </svg>
-              </div>
-              <h3 class="font-playfair text-xl font-bold text-primary-800 mb-4">Turismo Receptivo</h3>
-              <p class="text-neutral-600 leading-relaxed">Nuestra experiencia original: lideramos el mercado de turismo brasileño en Argentina.</p>
-            </div>
-
-            <div class="text-center p-8 bg-neutral-50 rounded-2xl hover:shadow-lg transition-all duration-300">
-              <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566l1.23-1.23a1 1 0 011.414 1.414l-1.23 1.23A7.002 7.002 0 015.101 16H3a1 1 0 01-1-1v-2.101a7.002 7.002 0 010-9.798V3a1 1 0 011-1zm7 4a3 3 0 100 6 3 3 0 000-6z" clip-rule="evenodd"></path>
-                </svg>
-              </div>
-              <h3 class="font-playfair text-xl font-bold text-primary-800 mb-4">Project Management</h3>
-              <p class="text-neutral-600 leading-relaxed">Gestión integral de proyectos desde la planificación hasta la entrega, asegurando calidad y tiempos.</p>
-            </div>
-
-            <div class="text-center p-8 bg-neutral-50 rounded-2xl hover:shadow-lg transition-all duration-300">
-              <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-              </div>
-              <h3 class="font-playfair text-xl font-bold text-primary-800 mb-4">Expansión Internacional</h3>
-              <p class="text-neutral-600 leading-relaxed">Desarrollo de proyectos en mercados internacionales, comenzando por el Caribe premium.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Footer básico -->
-      <footer class="bg-primary-900 text-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-            <div class="lg:col-span-2">
-              <h3 class="font-playfair text-3xl font-bold text-white mb-4">Argenway</h3>
-              <p class="text-blue-200 text-lg font-medium mb-4">Proyectos memorables</p>
-              <p class="text-white leading-relaxed max-w-md mb-6">Somos desarrolladores y gerenciadores hotelero-inmobiliarios. Creamos alianzas estratégicas con Hilton para desarrollar proyectos de clase mundial.</p>
-            </div>
-            <div>
-              <h4 class="font-semibold text-white mb-4">Enlaces</h4>
-              <ul class="space-y-2">
-                <li><a href="#proyectos" class="text-blue-200 hover:text-white transition-colors">Proyectos</a></li>
-                <li><a href="#nosotros" class="text-blue-200 hover:text-white transition-colors">Nosotros</a></li>
-                <li><a href="#servicios" class="text-blue-200 hover:text-white transition-colors">Servicios</a></li>
-                <li><a href="#contacto" class="text-blue-200 hover:text-white transition-colors">Contacto</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 class="font-semibold text-white mb-4">Contacto</h4>
-              <div class="space-y-2 text-blue-200 text-sm">
-                <p>inversiones@argenway.com</p>
-                <p>+54 9 3416 156 498</p>
-                <p>Argentina</p>
-                <p>Bariloche • Rosario</p>
-              </div>
-            </div>
-          </div>
-          <div class="border-t border-primary-800 pt-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-              <p class="text-blue-200 text-sm">© 2025 Solipago. Todos los derechos reservados.</p>
-              <div class="flex items-center space-x-4 mt-4 md:mt-0">
-                <div class="flex items-center space-x-2">
-                  <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                  </svg>
-                  <span class="text-blue-200 text-sm">Alianza Hilton</span>
+                        <div class="news-content">
+                            <h3 class="news-title">
+                                Hampton by Hilton Rosario: oportunidad de inversión única
+                            </h3>
+                            <p class="news-excerpt">
+                                El hotel de cadena Hilton se posiciona como la primera opción de inversión hotelera en Rosario.
+                            </p>
+                            <button class="news-link">Leer más →</button>
+                        </div>
+                    </article>
                 </div>
-                <div class="flex items-center space-x-2">
-                  <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
-                  </svg>
-                  <span class="text-blue-200 text-sm">+20 años</span>
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </footer>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contacto" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        Hablemos de tu <span class="section-title-accent">Inversión</span>
+                    </h2>
+                    <p class="section-description">
+                        Estamos aquí para responder todas tus preguntas y ayudarte a encontrar 
+                        la oportunidad de inversión perfecta para ti.
+                    </p>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-form-container">
+                        <h3 class="contact-form-title">Envíanos tu consulta</h3>
+                        
+                        <form class="contact-form" onsubmit="handleSubmit(event)">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Nombre completo *</label>
+                                <input type="text" id="name" name="name" required class="form-input" placeholder="Tu nombre completo">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" id="email" name="email" required class="form-input" placeholder="tu@email.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">Mensaje *</label>
+                                <textarea id="message" name="message" required rows="5" class="form-textarea" placeholder="Cuéntanos sobre tu interés en nuestros proyectos..."></textarea>
+                            </div>
+
+                            <button type="submit" class="form-submit">Enviar Consulta</button>
+                        </form>
+                    </div>
+
+                    <div class="contact-info">
+                        <h3 class="contact-info-title">Información de Contacto</h3>
+                        
+                        <div class="contact-details">
+                            <div class="contact-detail">
+                                <div class="contact-icon contact-icon-1">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="contact-detail-title">Email</h4>
+                                    <p class="contact-detail-info">inversiones@argenway.com</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail">
+                                <div class="contact-icon contact-icon-2">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="contact-detail-title">Teléfono</h4>
+                                    <p class="contact-detail-info">+54 9 3416 156 498</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-  </div>
 
-  <!-- Scripts básicos -->
-  <script>
-    // Scroll suave
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="footer-title">Argenway</h3>
+                    <p class="footer-subtitle">Proyectos memorables</p>
+                    <p class="footer-description">
+                        Somos desarrolladores y gerenciadores hotelero-inmobiliarios. 
+                        Creamos alianzas estratégicas con Hilton para desarrollar 
+                        proyectos de clase mundial.
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="footer-links-title">Enlaces Rápidos</h4>
+                    <ul class="footer-nav">
+                        <li><a href="#proyectos" class="footer-link">Nuestros Proyectos</a></li>
+                        <li><a href="#nosotros" class="footer-link">Nosotros</a></li>
+                        <li><a href="#contacto" class="footer-link">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4 class="footer-contact-title">Contacto</h4>
+                    <div class="footer-contact-details">
+                        <div class="footer-contact-item">
+                            <svg class="footer-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <p>inversiones@argenway.com</p>
+                        </div>
+
+                        <div class="footer-contact-item">
+                            <svg class="footer-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            <p>+54 9 3416 156 498</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="footer-copyright">© 2024 Solipago. Todos los derechos reservados.</p>
+                    <div class="footer-badge">
+                        <svg class="footer-badge-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        <span>Alianza Hilton</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu functionality
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
         }
-      });
-    });
-  </script>
+
+        function closeMobileMenu() {
+            document.getElementById('mobileMenu').style.display = 'none';
+        }
+
+        // Form submission
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('¡Gracias por tu consulta! Nos pondremos en contacto contigo pronto.');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html> 

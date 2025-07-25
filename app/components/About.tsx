@@ -30,20 +30,6 @@ export function About() {
                   el primer hotel de la cadena y constituyendo un hecho inédito en la historia 
                   turística de la región.
                 </p>
-                
-                <p>
-                  El camino recorrido en el mercado turístico argentino nos llevó a expandir 
-                  horizontes fuera del país y presentar el{" "}
-                  <strong className="text-primary-800">Pool de Inversión Punta Cana:</strong>{" "}
-                  nuestra primera oportunidad de inversión internacional en la perla del Caribe.
-                </p>
-                
-                <p>
-                  Tras el éxito conseguido decidimos volver al origen con el lanzamiento de{" "}
-                  <strong className="text-primary-800">Tru by Hilton Bariloche:</strong>{" "}
-                  el complemento ideal para Hampton, reafirmando nuestra confianza en el destino 
-                  y la alianza con Hilton.
-                </p>
               </div>
             </div>
 
@@ -79,25 +65,12 @@ export function About() {
                 <p className="text-sm text-neutral-600">Alianza estratégica con Hilton</p>
               </div>
             </div>
-
-            {/* CTA */}
-            <div className="pt-4">
-              <a
-                href="#contacto"
-                className="inline-flex items-center bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition-colors duration-200"
-              >
-                Conocer Más
-                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </a>
-            </div>
           </div>
 
           {/* Visual Timeline */}
           <div className="relative">
             <div className="space-y-8">
-              {/* Timeline Item 1 */}
+              {/* Timeline Items */}
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0">
                   <div className="w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center">
@@ -113,7 +86,6 @@ export function About() {
                 </div>
               </div>
 
-              {/* Timeline Item 2 */}
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0">
                   <div className="w-12 h-12 bg-gold-600 rounded-full flex items-center justify-center">
@@ -128,42 +100,7 @@ export function About() {
                   </p>
                 </div>
               </div>
-
-              {/* Timeline Item 3 */}
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold">3</span>
-                  </div>
-                </div>
-                <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-green-600">
-                  <h4 className="font-semibold text-primary-800 mb-2">Expansión Nacional</h4>
-                  <p className="text-neutral-600 text-sm">
-                    Iconcenter y Hampton by Hilton Rosario marcan nuestra 
-                    expansión a nuevos mercados estratégicos.
-                  </p>
-                </div>
-              </div>
-
-              {/* Timeline Item 4 */}
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-teal-600 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold">4</span>
-                  </div>
-                </div>
-                <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-teal-600">
-                  <h4 className="font-semibold text-primary-800 mb-2">Proyección Internacional</h4>
-                  <p className="text-neutral-600 text-sm">
-                    Pool de Inversión Punta Cana y Tru by Hilton Bariloche 
-                    consolidan nuestra visión global.
-                  </p>
-                </div>
-              </div>
             </div>
-
-            {/* Decorative Line */}
-            <div className="absolute left-6 top-12 bottom-12 w-0.5 bg-gradient-to-b from-primary-600 via-gold-600 via-green-600 to-teal-600"></div>
           </div>
         </div>
       </div>
