@@ -115,7 +115,7 @@ export function Hero() {
                     </div>
                   </div>
                   <p className="text-neutral-600">
-                    "Entre los mejores Hampton by Hilton del mundo"
+                    &ldquo;Entre los mejores Hampton by Hilton del mundo&rdquo;
                   </p>
                   <div className="flex items-center space-x-4 text-sm text-neutral-500">
                     <span>📍 Bariloche, Argentina</span>

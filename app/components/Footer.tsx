@@ -142,12 +142,12 @@ export function Footer() {
                 © {currentYear} Argenway. Todos los derechos reservados.
               </p>
               <div className="flex space-x-6 text-sm">
-                <a href="#" className="text-blue-200 hover:text-white transition-colors duration-200">
+                <button className="text-blue-200 hover:text-white transition-colors duration-200">
                   Términos y Condiciones
-                </a>
-                <a href="#" className="text-blue-200 hover:text-white transition-colors duration-200">
+                </button>
+                <button className="text-blue-200 hover:text-white transition-colors duration-200">
                   Política de Privacidad
-                </a>
+                </button>
               </div>
             </div>
 
